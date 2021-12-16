@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Jabr",
+    "short_name": "Jabr",
+    "description": "Jabrajabr",
+    "version": "1.0",
+    "permissions": [
+        "tabs"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.habr.com/*"],
+            "all_frames": false,
+            "js": ["script.js"],
+            "run_at": "document_end"
+        }
+    ]
+}
